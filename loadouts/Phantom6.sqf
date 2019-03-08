@@ -1,0 +1,62 @@
+comment "Exported from Arsenal by Nichols";
+
+comment "Remove existing items";
+removeAllWeapons _this;
+removeAllItems _this;
+removeAllAssignedItems _this;
+removeUniform _this;
+removeVest _this;
+removeBackpack _this;
+removeHeadgear _this;
+removeGoggles _this;
+
+comment "Add containers";
+_this forceAddUniform "VSM_Multicam_Camo";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 8 do {_this addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_EarPlugs";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_epinephrine";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 6 do {_this addItemToUniform "ACE_packingBandage";};
+_this addItemToUniform "ACE_personalAidKit";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_tourniquet";};
+_this addItemToUniform "ACE_salineIV_500";
+for "_i" from 1 to 2 do {__this addItemToUniform "ACE_IR_Strobe_Item";};
+_this addItemToUniform "ACE_Flashlight_XL50";
+_this addItemToUniform "ACE_MapTools";
+_this addItemToUniform "ACE_microDAGR";
+_this addVest "VSM_RAV_operator_OGA_OD";
+for "_i" from 1 to 2 do {_this addItemToVest "CUP_17Rnd_9x19_glock17";};
+for "_i" from 1 to 6 do {_this addItemToVest "SMA_30Rnd_556x45_Mk318";};
+for "_i" from 1 to 4 do {_this addItemToVest "SMA_30Rnd_556x45_Mk318_Tracer";};
+for "_i" from 1 to 2 do {_this addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_this addItemToVest "CUP_HandGrenade_M67";};
+for "_i" from 1 to 2 do {_this addItemToVest "ACE_Chemlight_White";};
+for "_i" from 1 to 2 do {_this addItemToVest "Chemlight_red";};
+for "_i" from 1 to 2 do {_this addItemToVest "ACE_Chemlight_IR";};
+_this addItemToVest "ACE_M14";
+_this addItemToVest "SmokeShellRed";
+_this addItemToVest "SmokeShellGreen";
+_this addHeadgear "VSM_Mich2000_2_Multicam";
+_this addGoggles "VSM_Goggles";
+
+comment "Add weapons";
+_this addWeapon "SMA_HK416CUSTOMafgB";
+_this addPrimaryWeaponItem "SMA_supp1b_556";
+_this addPrimaryWeaponItem "SMA_SFPEQ_HKTOP_BLK";
+_this addPrimaryWeaponItem "CUP_optic_ACOG";
+_this addWeapon "CUP_hgun_Glock17_blk";
+_this addHandgunItem "CUP_acc_Glock17_Flashlight";
+_this addHandgunItem "optic_MRD";
+_this addWeapon "Laserdesignator_01_khk_F";
+
+comment "Add items";
+_this linkItem "ItemMap";
+_this linkItem "ItemCompass";
+_this linkItem "ItemWatch";
+_this linkItem "tf_anprc152";
+_this linkItem "ItemGPS";
+
+comment "Set Medical Class";
+_this setVariable ["ace_medical_medicClass",2];
